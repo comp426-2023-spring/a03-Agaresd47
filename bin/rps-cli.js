@@ -1,22 +1,22 @@
 #!/usr/bin/env node
 
-import minimist from 'minimist'
-import { rps } from "../lib/rpsls.js"
+import minimist from 'minimist';
+import { rps } from "../lib/rpsls.js";
 
 var argv = minimist(process.argv.slice(2))
 
 function printHelp() {
-    console.log(`Usage: node-rpsls [SHOT]
-    Play the Lizard-Spock Expansion of Rock Paper Scissors (RPSLS)!
+    console.log(`Usage: node-rps [SHOT]
+    Play Rock Paper Scissors (RPS)
     
-      -h, --help        display this help message and exit
-      -r, --rules       display the rules and exit
+      -h, --help      display this help message and exit
+      -r, --rules     display the rules and exit
     
     Examples:
-      node-rpsls        Return JSON with single player RPSLS result.
-                        e.g. {"player":"rock"}
-      node-rpsls rock   Return JSON with results for RPSLS played against a simulated opponent.
-                        e.g {"player":"rock","opponent":"Spock","result":"lose"}`)
+      node-rps        Return JSON with single player RPS result.
+                      e.g. {"player":"rock"}
+      node-rps rock   Return JSON with results for RPS played against a simulated opponent.
+                      e.g {"player":"rock","opponent":"scissors","result":"win"}`)
 }
 
 function printRules() {

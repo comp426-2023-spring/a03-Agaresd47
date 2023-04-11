@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import minimist from 'minimist'
-import { rpsls } from "../lib/rpsls.js"
+import minimist from 'minimist';
+import { rpsls } from "../lib/rpsls.js";
 
 var argv = minimist(process.argv.slice(2))
 
@@ -35,13 +35,13 @@ function printRules() {
 
 
 // Help
-if (argv.h !== undefined || argv.help !== undefined) {
+if (argv.h|| argv.help) {
     printHelp()
     process.exit(0)
 }
 
 // Rules
-if (argv.r !== undefined || argv.rules !== undefined) {
+if (argv.r|| argv.rules) {
     printRules()
     process.exit(0)
 }
